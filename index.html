@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html>
+	<meta charset='utf-8'/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+
+	<style type='text/css'>
+	*,body{
+		font-family:'微软雅黑';
+	}
+	.container .main{
+		text-align:center;
+	}
+	.navbar {
+    padding: 15px 0;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+		position:fixed;
+		top:0;
+}
+.navbar-header img{
+	height:54px;
+	float:left;
+}
+.navbar .name-logo{
+	margin-left:20px;
+	line-height:54px;
+	font-size:30px;
+	color:rgb(26, 180, 210);;
+	float:left;
+}
+footer{
+	height:50px;
+	color: #959595;
+	line-height:50px;
+  background: #242E35;
+}
+#navbar .active{
+	border-bottom:solid 4px rgb(228,62,28); 
+}
+#navbar li:not(.active) :hover{
+	border-bottom:solid 4px rgb(228,134,158); 
+}
+
+.video-img{
+	height:400px;
+	-webkit-box-shadow:0 0 20px 5px #aaa;
+  -moz-box-shadow:0 0 20px 5px #aaa;
+  box-shadow:0 0 20px 5px #aa;
+}
+.content section{
+	padding:105px 0 30px 0;
+}
+.content .des{
+	background:#f1f1f1;
+}
+.content .tutorial{
+	color:#fff;
+	background:rgb(91,192,222);
+}
+.content .tutorial .text{
+	margin-top:30px;
+}
+.content .tutorial .img.right{
+	text-align:right;
+}
+.content .contact{
+	background:#242E35;
+	//background:rgb(179,129,59);
+}
+.contact .head{
+	color:rgb(179,129,59);
+	margin-top:30px 0px;
+}
+.contact{
+	color:#fff;
+}
+.contact .cpy{
+	padding-top:50px;
+	color:rgb(179,129,59);
+}
+		
+		.content .download{
+	background:#f1f1f1;
+}
+		.box {
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+	background: #fff;
+}
+
+#sitelist {
+    /* top: 39px; */
+		margin:0 15px 15px 15px;
+		text-align: center;
+    right: 0px;
+    height: calc(100% - 0px);
+    list-style-type: none;
+    overflow-y: auto;
+    overflow-x: overlay;
+    background-color: #fafafa;
+}
+
+.site {
+    margin: 8px 12px;
+    width: 160px;
+    height: 90px;
+    background-color: #fff;
+    padding: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 0 10px #fff;
+}
+.site-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 0px;
+}
+.site-title {
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-space: nowrap;
+    color: #4c4c4c;
+}
+.site-alt {
+    position: relative;
+    top: 10px;
+    clear: both;
+    width: 100%;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 100;
+    color: #666;
+    line-height: 1.4em;
+    /* border: 1px solid #0000ff; */
+}
+</style>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function(){
+	//计算屏幕高度自动调整
+	$('#navbar li').on('click', function(){
+		var section = $(this).attr("ref");
+		$('#navbar li').removeClass('active');
+		$(this).addClass("active");
+	});
+});
+</script>
+<body>
+	<!--导航栏开始-->
+	<nav class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+					<img src='./logo.png'/>
+					<div class="name-logo"></div>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#download" ref='downlaod'>下載</a></li>
+					<li><a href="#tutorial" ref='tutorial'>安装</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--导航栏结束-->
+	<!---中间内容开始--->
+	<div class="content">
+		<section id='download' class="download">
+			<div class='container'>
+						<div class="row">
+
+								<ul id="sitelist">
+									<li class="site">
+										<a class="siteLink addNew" data-site-id="1" target="_blank" href="https://www.pinterest.com/">
+											<img class="site-icon" src="./pinterest.png">
+											<div class="site-title">Pinterest</div>
+											<div class="site-alt">不上P站，枉称设计。从优美的图海中洞见全球设计创意</div>
+										</a>
+									</li>
+									<li class="site"><a class="siteLink addNew" data-site-id="3" target="_blank" href="https://www.behance.net/"><img class="site-icon" src="./behance.png"><div class="site-title">Behance</div><div class="site-alt">Adobe旗下设计师交流平台</div></a></li>
+									<li class="site">
+										<a class="siteLink addNew" data-site-id="2" target="_blank" href="https://dribbble.com/">
+											<img class="site-icon" src="./dribbble.png">
+											<div class="site-title">Dribbble</div><div class="site-alt">全球优秀设计师最佳交流展示平台</div></a>
+									</li>
+									
+									
+									<li class="site"><a class="siteLink addNew" data-site-id="15" target="_blank" href="https://www.designbetter.co/"><img class="site-icon" src="./designbetter.png"><div class="site-title">DesignBetter</div><div class="site-alt">提升你的设计思维</div></a></li>
+									
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="box">
+									<h2>一键找回您的Pin&Be</h2>
+									<p>很有可能是有史以来最简单易用、高效稳定的访问Pin&Be工具之一</p>	
+									<br/>
+									<img src="./360js.png" />
+									<img src="./360aq.png" />
+									<img src="./qq.png" />
+									<img src="./uc.png" />
+									<img src="./lb.png" />
+									<img src="./sg.png" />
+									<img src="./chrome.png" />
+									<br/>
+									<br/>
+									<p class="text-gray">适用于  <b>谷歌/360/QQ/UC/猎豹/搜狗</b>  等浏览器等</p>
+									<p class="text-gray">下载后参照安装教程进行安装</p>
+									<br/>
+									<a href="https://share.weiyun.com/5lXTF6b" target="_blank"><button class="btn btn-lg btn-info">立即体验</button></a>
+									
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				
+		</section>
+		<section id='desc' class="tutorial">
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-6'>
+						<img src='./autoproxy.png' height=300px>
+					</div>
+					<div class='col-md-6 text'>
+						<h3>简单高效</h3>
+						<p>简单易用，只需两步，一键开启。</p>
+						<p>很有可能是有史以来最简单易用、高效稳定的工具之一。</p>
+					</div>
+				</div>
+				<div class='row'>
+					
+					<div class='col-md-6 text'>
+						<h3>稳定无忧</h3>
+						<p>全球多条线路，保障您的后顾之忧!</p>
+						<p>高加密连接保障您的隐私不被追踪泄露！</p>
+					</div>
+					<div class='col-md-6 img right'>
+						<img src='./global.png'  height=300px>
+					</div>
+				</div>
+				<div class='row'>
+				<div class='col-md-6'>
+					<img src='./sites.png'  height=300px>
+				</div>
+				<div class='col-md-6 text'>
+					<h3>高性价比</h3>
+					<p>最低月10元起步，高性价比。
+					<p>拒绝免费套路，拒绝广告和盗号，而我们选择提供有价值的优质服务</p>
+					<p>支持试用，拒绝年费起步，拒绝跑路</p>
+				</div>
+				</div>
+			</div>
+				
+		</section>
+		<section id='tutorial' class="download">
+			<div class='container'>
+				<h3>安装扩展</h3>
+				<div class="row" style="background: #fff;padding: 30px;color:#000">
+							<div class="col-xs-4">
+							<b>第一步：解压扩展压缩包</b>
+							<br/>
+							将下载的压缩包Zip文件用压缩解压软件解压出来，解压到目录xx
+							<br/>
+							<br/>
+							<b>第二步：打开chrome扩展中心并开启开发者模式</b>
+							<br/>
+							网址栏复制粘贴  <b>chrome://extensions</b>  回车即可打开扩展中心，勾选顶部右侧的<b>开发者模式</b>，顶部左侧即可出现<b>加载已解压扩展程序</b>按钮
+							<br/>
+							<br/>
+							<b>第三步：载入方式安装扩展</b>
+							<br/>
+							点击加载已解压的扩展程序按钮，选择第一步解压的xx目录即可完成安装(有manifest.json文件的那一层目录)。<br/>
+							<br/>
+							<br/>
+							
+								<div class="" style="padding: 5px;color: rgb(179,129,59);border:dashed 3px rgb(179,129,59);">
+								注意事项：<br/>
+								<ul>
+									<li>不同浏览器界面可能不尽相同，但是步骤相同</li>
+									<li>如chrome弹出提示是否停用此插件，点击  <b>取消</b>  忽略即可</li>
+									<li>如插件有升级，请先卸载掉原来的插件，安装新插件即可。</li>
+								</ul>
+									
+								</div>
+							</div>
+							<div class="col-xs-8">
+								<img with="100%" src="./chrome2.png" />
+							</div>
+						</div></div>
+				</section>
+			<section id='contact' class="contact">
+			<div class='container'>
+				<div class='row'>
+				<div class='col-md-12 cpy'>
+					<h3 class='text-center'>©Cladder 2019</h3>
+				</div>
+				</div>
+			</div>	
+		</section>
+	</div>
+	<!--中间内容结束-->
+</body>
+</html>
